@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "nx-next-prisma/api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
