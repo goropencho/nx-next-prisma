@@ -6,7 +6,12 @@
   "scripts": {
     "format": "prettier \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
     "format:check": "pnpm format --check",
-    "format:write": "pnpm format --write"
+    "format:write": "pnpm format --write",
+    "build": "pnpm exec nx run-many --target=build",
+    "tsc": "pnpm exec nx run-many --target=tsc",
+    "lint": "pnpm exec nx run-many --target=lint",
+    "validate": "pnpm format:write && pnpm tsc && pnpm lint && pnpm build",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +21,8 @@
     "@nx/next": "19.0.1",
     "eslint": "~8.57.0",
     "nx": "19.0.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "next": "14.0.4",
